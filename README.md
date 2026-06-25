@@ -83,6 +83,22 @@ Business Insights & Recommendations
 
 ---
 
+## 📸 Visualizations
+
+### Rating Distribution
+![Rating Distribution](Rating%20Distribution.png)
+
+### Sentiment Distribution
+![Sentiment Distribution](Sentiment%20Distribution.png)
+
+### Brand-wise Sentiment Distribution
+![Brand Sentiment](Brand%20wise%20Sentiment%20Distribution.png)
+
+### Votes Rating Wise
+![Votes Rating Wise](Votes%20Rating%20wise.png)
+
+---
+
 ## 🔍 Key Insights
 
 - 📦 Analyzed **67,986 smartphone reviews** across multiple brands and price ranges
@@ -111,12 +127,17 @@ Business Insights & Recommendations
 ## 📁 Repository Structure
 
 ```
-CodeAlpha_Task/
+Amazon-Phone-Review-Sentiment-Analysis/
 │
-├── Amazon Phone Review.ipynb     # Full analysis notebook (EDA + Visualizations + NLP)
-├── 20191226-items.csv            # Product dataset
-├── 20191226-reviews.csv          # Reviews dataset
-└── README.md                     # Project documentation
+├── Amazon Phone Review.ipynb       # Full analysis notebook (EDA + Visualizations + NLP)
+├── 20191226-items.csv              # Product dataset
+├── 20191226-reviews.csv            # Reviews dataset
+├── Rating Distribution.png         # Visualization
+├── Sentiment Distribution.png      # Visualization
+├── Brand wise Sentiment Distribution.png  # Visualization
+├── Votes Rating wise.png           # Visualization
+├── requirements.txt                # Dependencies
+└── README.md                       # Project documentation
 ```
 
 ---
@@ -125,12 +146,12 @@ CodeAlpha_Task/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Data897analysit/CodeAlpha_Task.git
+git clone https://github.com/Data897analysit/Amazon-Phone-Review-Sentiment-Analysis.git
 ```
 
 2. Install dependencies:
 ```bash
-pip install pandas numpy matplotlib seaborn textblob
+pip install -r requirements.txt
 ```
 
 3. Open the notebook:
