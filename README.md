@@ -1,8 +1,3 @@
-# Amazon Phone Review - NLP Sentiment Analysis
-
-DataSet Link :- https://www.kaggle.com/datasets/grikomsn/amazon-cell-phones-reviews?utm_source=chatgpt.com
-
-
 # 📱 Amazon Phone Review — NLP Sentiment Analysis
 
 > End-to-end Python project analyzing **67,986+ Amazon smartphone reviews** to uncover customer satisfaction patterns, brand performance insights, and product-level sentiment trends using EDA and NLP.
