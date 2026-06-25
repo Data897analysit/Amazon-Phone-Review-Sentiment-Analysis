@@ -1,109 +1,157 @@
-# Amazon Phone Review
+# Amazon Phone Review - NLP Sentiment Analysis
 
 DataSet Link :- https://www.kaggle.com/datasets/grikomsn/amazon-cell-phones-reviews?utm_source=chatgpt.com
 
-📱 Smartphone Review Sentiment Analysis
 
-📌 Project Overview
+# 📱 Amazon Phone Review — NLP Sentiment Analysis
 
-Analyzed smartphone customer reviews, ratings, prices, and sentiments to identify customer satisfaction patterns, brand performance, and business insights using Python and NLP techniques.
+> End-to-end Python project analyzing **67,986+ Amazon smartphone reviews** to uncover customer satisfaction patterns, brand performance insights, and product-level sentiment trends using EDA and NLP.
 
-🎯 Business Problem
+---
 
-Brands often struggle to understand customer satisfaction, sentiment trends, and product performance from large review datasets. This project helps identify:
+## 📌 Business Problem
 
-Customer sentiment patterns
+Smartphone brands struggle to understand **what customers actually feel** about their products at scale. Manually reading thousands of reviews is impossible — so how do you identify:
 
-Brand-wise performance
+- Which brands have the most satisfied customers?
+- What drives negative reviews?
+- Does price actually influence customer ratings?
+- Are review trends seasonal?
 
-Price vs Rating relationship
+This project answers all of the above using **data-driven NLP and exploratory analysis**.
 
-Customer engagement trends
+---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Python
+| Tool | Usage |
+|------|-------|
+| Python | Core programming language |
+| Pandas & NumPy | Data cleaning, merging, feature engineering |
+| Matplotlib & Seaborn | Data visualizations |
+| TextBlob | NLP sentiment analysis |
+| Jupyter Notebook | Interactive development environment |
 
-Pandas
+---
 
-NumPy
+## 📂 Dataset Overview
 
-Matplotlib
+- **Source:** [Amazon Cell Phones Reviews — Kaggle](https://www.kaggle.com/datasets/grikomsn/amazon-cell-phones-reviews)
+- **Files:** `20191226-items.csv` (product data) + `20191226-reviews.csv` (review data)
+- **Merged Records:** 67,986 reviews across multiple smartphone brands
+- **Key Columns:** `brand`, `rating`, `price`, `totalReviews`, `helpfulVotes`, `date`, `review title`, `review body`
 
-Seaborn
+---
 
-TextBlob
+## ⚙️ Project Workflow
 
-Jupyter Notebook
+```
+Raw Data (2 CSVs)
+      ↓
+Data Merging (ASIN key join)
+      ↓
+Data Cleaning (Missing values — brand filled with mode, helpfulVotes filled with 0)
+      ↓
+Feature Engineering (full_review = title + body)
+      ↓
+EDA & Visualizations (7 charts)
+      ↓
+NLP Sentiment Scoring (TextBlob polarity)
+      ↓
+Sentiment Classification (Positive / Negative / Neutral)
+      ↓
+Business Insights & Recommendations
+```
 
-⚙️ Project Workflow
+---
 
-Data Cleaning & Preprocessing
+## 📊 Analysis Performed
 
-Merged product and review datasets using ASIN
+### Task 1 — Exploratory Data Analysis (EDA)
+- Dataset shape, info, null value treatment
+- Brand-wise average rating, total reviews, average price
+- Missing value handling: ~20,000 brand nulls filled with mode
 
-Performed Feature Engineering
+### Task 2 — Visualizations (7 Charts)
+- **Rating Distribution** — histogram of all ratings
+- **Price vs Rating** — scatter plot for price-rating relationship
+- **Trend-wise Rating** — monthly average rating trend
+- **Trend-wise Total Reviews** — monthly review volume trend
+- **Brand-wise Average Rating** — horizontal bar chart
+- **Brand-wise Total Reviews** — review volume by brand
+- **Votes Rating-wise** — helpful votes by rating group
 
-Conducted Sentiment Analysis using TextBlob
+### Task 3 — NLP Sentiment Analysis
+- Applied **TextBlob** polarity scoring on full review text
+- Classified reviews: `Positive (>0.1)` | `Neutral (-0.1 to 0.1)` | `Negative (<-0.1)`
+- Brand-wise sentiment distribution analysis
 
-Performed Exploratory Data Analysis (EDA)
+---
 
-Built visualizations for business insights
+## 🔍 Key Insights
 
-📊 Key Analysis Performed
+- 📦 Analyzed **67,986 smartphone reviews** across multiple brands and price ranges
+- 📉 **~29.4% of reviews had missing brand data** — handled via mode imputation
+- ⭐ Most customers rated products between **3.5 – 4 stars** — moderate overall satisfaction
+- 📱 **Samsung** led in total review volume — highest market presence
+- 💰 **Xiaomi** delivered the best value-for-money products based on rating vs price analysis
+- 💡 **Price shows weak correlation with ratings** — customers rate based on experience, not cost
+- 😠 **Negative reviews received the highest helpful votes** — dissatisfied customers engage more
+- 📅 Review volume showed **seasonal trends** — certain months had significantly higher engagement
+- 💬 **Positive sentiment dominated** overall — but negative reviews were more impactful per vote
 
-Rating Distribution Analysis
+---
 
-Brand-wise Rating Comparison
+## 💼 Business Recommendations
 
-Price vs Rating Analysis
+1. **Focus on mid-range smartphones** — price does not drive satisfaction; features and reliability do
+2. **Investigate negative review drivers** — they receive the most helpful votes, meaning they influence other buyers heavily
+3. **Use positive reviews in marketing** — leverage high-rated periods and brands in campaigns
+4. **Launch promotions during high-engagement months** — seasonal trends show clear peaks
+5. **Improve after-sales service** — negative sentiment is often service-related, not just product-related
+6. **Brands with low review volume** should focus on encouraging verified purchaser reviews to improve visibility
 
-Monthly Review Trend Analysis
+---
 
-Helpful Votes Analysis
+## 📁 Repository Structure
 
-Sentiment Distribution Analysis
+```
+CodeAlpha_Task/
+│
+├── Amazon Phone Review.ipynb     # Full analysis notebook (EDA + Visualizations + NLP)
+├── 20191226-items.csv            # Product dataset
+├── 20191226-reviews.csv          # Reviews dataset
+└── README.md                     # Project documentation
+```
 
-📈 Visualizations
+---
 
-Rating Histogram
+## 🚀 How to Run
 
-Brand-wise Average Rating
+1. Clone the repository:
+```bash
+git clone https://github.com/Data897analysit/CodeAlpha_Task.git
+```
 
-Brand-wise Total Reviews
+2. Install dependencies:
+```bash
+pip install pandas numpy matplotlib seaborn textblob
+```
 
-Sentiment Distribution
+3. Open the notebook:
+```bash
+jupyter notebook "Amazon Phone Review.ipynb"
+```
 
-Monthly Review Trends
+4. Run all cells top to bottom ✅
 
-Price vs Rating Scatter Plot
+---
 
-🔍 Key Insights
+## 🙋‍♀️ About Me
 
-Most customers gave ratings between 3.5–4 stars
+**Priyanshi Rajput** — Data Analyst with expertise in Python, SQL, Power BI, and Tableau.
+Passionate about transforming raw data into actionable business decisions.
 
-Samsung had the highest review volume and market presence
-
-Xiaomi delivered the best value-for-money products
-
-Price does not strongly impact customer ratings
-
-Positive sentiment dominated overall customer reviews
-
-Negative reviews received the highest helpful votes
-
-💼 Business Recommendations
-
-Focus more on mid-range smartphones
-
-Improve after-sales service quality
-
-Use positive customer feedback in marketing campaigns
-
-Launch promotions during high-engagement months
-
-Thanku 
-
-Priyanshi 
-
-Data Analyst 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/priyanshi-rajput)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)](https://github.com/Data897analysit)
+[![HackerRank](https://img.shields.io/badge/HackerRank-SQL%205★-brightgreen?logo=hackerrank)](https://www.hackerrank.com/profile/priyanshi1652001)
